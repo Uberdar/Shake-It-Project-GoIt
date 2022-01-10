@@ -1,16 +1,11 @@
 .main-gallery {
-  background-image: linear-gradient(
-    to bottom,
-    --secondary-bg-color 30%,
-    --primary-white-color 70%,
-    // #09792b 40%,
-    // #00b9ff 40%,
-    // #00b9ff 65%,
-    // #ffb800 65%
-  );
+  background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 40%, #ffffff 100%);
 }
 .gallery__link {
   margin: 20px;
+}
+.gallery {
+  display: flex;
 }
 
 /*!
