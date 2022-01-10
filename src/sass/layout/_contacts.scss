@@ -1,0 +1,98 @@
+.contacts__section{
+  padding: 40px 50px 15px 50px;
+}
+.contacts__card-wrap {
+  min-width: 220px;
+  padding: 20px 43px;
+  margin-bottom: 10px;
+
+  border: 1px solid var(--contacts-underline-color);
+  background-color: var(--primary-bg-color);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  &:last-child {
+    margin-bottom: 54px;
+  }
+  &:hover,
+  &:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  @include mq (tablet){
+    width: 220px;
+  }
+  @include mq (desktop){
+    width: 330px;
+  }
+}
+.contacts__label-cafe,
+.contacts__label-foodtrack {
+  display: block;
+  text-align: center;
+  width: 80px;
+  height: 16px;
+
+  color: var(--primary-white-color);
+  background-color: var(--contacts-cafe-color);
+  border-radius: 4px;
+}
+.contacts__label-foodtrack {
+  width: 130px;
+  background-color: var(--contacts-food-truck-color);
+}
+.contacts__card-city {
+  @include font(500, 12px, 1.8, 0.04em);
+  color: var(--primary-black-color);
+}
+.contacts__box-wrap {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.contacts__card-text {
+  @include font(500, 12px, 1.5);
+  color: var(--primary-gray-txt-color);
+}
+
+.contacts__works-days {
+  @include font(500, 12px, 1.8);
+}
+.contacts__works-item {
+  &:first-child {
+  margin-bottom: 10px;
+  }
+}
+.contacts__time {
+  color: var(--secondary-accent-color);
+  @include font(500, 12px, 1.8);
+}
+.contacts__phone,
+.contacts__mail {
+  display: block;
+  color: var(--primary-gray-txt-color);
+}
+// .contacts__btn-list {
+//   // align-items: center;
+  
+// }
+.contacts__btn {
+  display: flex;
+  border-radius: 22px;
+  height: 44px;
+  width: 162px;
+  // text-align: center;
+  // align-content: center;
+  // align-self: center;
+  @include font(700, 16px, 1.3);
+
+}
+.btn-location {
+  padding-left: 17px;
+  color: var(--primary-white-color);
+  background-color: var(--reviews-house-color);
+}
+.btn-franchise {
+  // align-content: center;
+  padding-left: 32px;
+  color: var(--primary-accent-color);
+  background-color: var(--primary-white-color);
+}
