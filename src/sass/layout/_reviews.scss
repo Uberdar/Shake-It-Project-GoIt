@@ -1,16 +1,16 @@
 .reviews {
   position: relative;
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 43px;
   background: var(--primary-white-color);
 
   @include mq(tablet) {
-    padding-top: 121px;
+    padding-top: 91px;
     padding-bottom: 60px;
   }
 
   @include mq(desktop) {
-    padding-top: 123px;
+    padding-top: 93px;
     padding-bottom: 65px;
   }
 }
