@@ -1,9 +1,26 @@
-.contacts__section{
+.contacts__container{
   padding: 40px 50px 15px 50px;
+  @include mq (tablet){
+    padding-right: 35px;
+    padding-left: 35px;
+  }
+  @include mq (desktop){
+    padding-right: 115px;
+    padding-left: 115px;
+  }
 }
+.contacts__cards-wrapper{
+  @include mq (tablet){
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
 .contacts__card-wrap {
-  min-width: 220px;
+  max-width: 220px;
   padding: 20px 43px;
+  margin: 0 auto;
   margin-bottom: 10px;
 
   border: 1px solid var(--contacts-underline-color);
@@ -11,18 +28,22 @@
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   &:last-child {
-    margin-bottom: 54px;
+    margin-bottom: 50px;
   }
   &:hover,
   &:focus{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  
   @include mq (tablet){
-    width: 220px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    &:last-child{
+      margin-right: 0;
+      margin-bottom: 0;
+    }
   }
   @include mq (desktop){
-    width: 330px;
+    min-width: 330px;
   }
 }
 .contacts__label-cafe,
@@ -70,29 +91,47 @@
   display: block;
   color: var(--primary-gray-txt-color);
 }
-// .contacts__btn-list {
-//   // align-items: center;
-  
-// }
+.contacts__btn-list {
+  margin: 0 auto;
+  @include mq(tablet){
+    display: flex;
+    justify-content: center;
+    
+  }
+}
 .contacts__btn {
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 22px;
   height: 44px;
   width: 162px;
-  // text-align: center;
-  // align-content: center;
-  // align-self: center;
+  margin: 0 auto;
   @include font(700, 16px, 1.3);
+
+  @include mq(tablet){
+    width: 190px;
+  }
 
 }
 .btn-location {
-  padding-left: 17px;
+  margin-bottom: 10px;
   color: var(--primary-white-color);
   background-color: var(--reviews-house-color);
 }
 .btn-franchise {
-  // align-content: center;
-  padding-left: 32px;
   color: var(--primary-accent-color);
   background-color: var(--primary-white-color);
+  @include mq(tablet){
+    margin-left: 15px;
+  }
+}
+.contacts__icon-arrow {
+  margin-left: 10px;
+}
+.btn-franchise .contacts__icon-arrow {
+  stroke: var(--primary-accent-color);
+}
+.btn-location .contacts__icon-arrow {
+  stroke: var(--primary-white-color);
 }

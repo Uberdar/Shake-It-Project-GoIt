@@ -28,22 +28,31 @@
   html {
     box-sizing: border-box;
   }
-
   .container{
+    @include mq(mobile-only){
+      padding: 0 20px;
+    }
     @include mq(mobile){
-    padding: 0 20px;
+      width: 480px;
+      padding: 0 20px;
+    }
+  @include mq(tablet){
+    width: 768px;
+    padding: 0 35px;
   }
     @include mq(desktop){
     width: 1280px;
-    padding: 0 35px;
+    padding: 0 115px;
   }
 }  
 
 
 
+
   
 
   
+
   h1,
   h2,
   h3,
