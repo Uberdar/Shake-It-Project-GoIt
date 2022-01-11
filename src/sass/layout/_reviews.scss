@@ -1,0 +1,246 @@
+.reviews {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 86px;
+  background: var(--primary-white-color);
+  margin: 0;
+
+  @include mq(tablet) {
+    padding-top: 121px;
+    padding-bottom: 121px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 123px;
+    padding-bottom: 132px;
+  }
+}
+
+.visually-hiden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  @include mq(mobile) {
+    max-width: 440px;
+  }
+
+  @include mq(tablet) {
+    max-width: 620px;
+  }
+
+  @include mq(desktop) {
+    max-width: 926px;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  background: var(--primary-white-color);
+  flex-direction: column;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide__img {
+  display: inline-block;
+  margin-bottom: 29px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85px;
+  height: 85px;
+
+  @include mq(tablet) {
+    margin-bottom: 19px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 15px;
+  }
+}
+
+.slider-slide__wrapp {
+  position: relative;
+  z-index: 20;
+  padding: 43px 50px 20px 50px;
+  margin-bottom: 30px;
+
+  background-color: var(--reviews-bg-color);
+
+  @include mq(tablet-only) {
+    background-color: transparent;
+  }
+
+  @include mq(tablet) {
+    padding: 47px 36px 28px 40px;
+    margin-bottom: 24px;
+  }
+
+  @include mq(desktop) {
+    padding-right: 54px;
+    padding-bottom: 32px;
+    padding-left: 59px;
+    margin-bottom: 15px;
+  }
+}
+
+.slider-slide__meta {
+  position: relative;
+  z-index: 21;
+  padding-right: 16px;
+  padding-left: 7px;
+  background: repeating-linear-gradient(
+    var(--reviews-bg-color) 0px,
+    var(--reviews-bg-color) 30px,
+    var(--contacts-underline-color) 31px,
+    var(--contacts-underline-color) 31px
+  );
+
+  @include mq(tablet-only) {
+    background: repeating-linear-gradient(
+      transparent 0px,
+      transparent 29px,
+      var(--contacts-underline-color) 29px,
+      var(--contacts-underline-color) 30px
+    );
+  }
+
+  @include mq(tablet) {
+    padding-right: 44px;
+    padding-bottom: 6px;
+    padding-left: 20px;
+  }
+
+  @include mq(desktop) {
+    padding-right: 35px;
+    padding-bottom: 7px;
+    padding-left: 28px;
+  }
+}
+
+.slider-slide__text {
+  font-style: normal;
+
+  @include font($fw: 500, $fz: 12px, $lh: 2.6);
+
+  color: var(--primary-black-color);
+
+  @include mq(tablet) {
+    @include font($fw: null, $fz: 14px, $lh: 2.14, $ls: 0.04em);
+  }
+
+  @include mq(desktop) {
+    @include font($fw: null, $fz: 16px, $lh: 1.88, $ls: null);
+  }
+
+  &::before {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    z-index: -1;
+    display: inline-block;
+    content: ' ';
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/reviews/qoutes.svg);
+    background-repeat: no-repeat;
+    color: var(--contacts-underline-color);
+
+    @include mq(mobile) {
+      top: -20px;
+      left: -22px;
+    }
+
+    @include mq(tablet) {
+      top: -17px;
+      left: -8px;
+    }
+
+    @include mq(desktop) {
+      top: -15px;
+      left: 0;
+    }
+  }
+}
+
+.slider-slide__subtitle {
+  margin-bottom: 42px;
+
+  @include font($fw: 500, $fz: 14px, $lh: 1.86);
+
+  font-style: normal;
+  text-align: center;
+  color: var(--primary-black-color);
+
+  @include mq(mobile) {
+    margin-bottom: 47px;
+  }
+
+  @include mq(tablet) {
+    @include font($fw: null, $fz: 16px, $lh: null, $ls: null);
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    background-image: url(../images/reviews/dots.svg);
+
+    @include mq(tablet) {
+      margin-bottom: 14px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 0px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
+}
+
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12.4px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px));
+}
+
+.swiper-pagination-bullet-active {
+  background: url(../images/reviews/home.svg);
+  border-radius: 0;
+}
