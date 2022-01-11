@@ -1,12 +1,23 @@
+.contacts__section {
+  background-image: linear-gradient(to bottom, #ffffff 7%,
+    #fff5f6 7%,#fff5f6 100%);
+  @include mq(tablet) {
+  background-image: linear-gradient(to bottom, #ffffff 15%,
+    #fff5f6 15%,#fff5f6 100%);
+  }
+}
 .contacts__container{
-  padding: 40px 50px 15px 50px;
+  padding: 43px 50px 15px 50px;
+  margin: 0 auto;
   @include mq (tablet){
     padding-right: 35px;
     padding-left: 35px;
+    // margin: 0 auto;
   }
   @include mq (desktop){
     padding-right: 115px;
     padding-left: 115px;
+    // margin: 0 auto;
   }
 }
 .contacts__cards-wrapper{
@@ -16,15 +27,14 @@
     margin-bottom: 50px;
   }
 }
-
 .contacts__card-wrap {
   max-width: 220px;
-  padding: 20px 43px;
+  padding: 43px 20px;
   margin: 0 auto;
   margin-bottom: 10px;
 
   border: 1px solid var(--contacts-underline-color);
-  background-color: var(--primary-bg-color);
+  background-color: var(--primary-white-color);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   &:last-child {
@@ -37,6 +47,7 @@
   @include mq (tablet){
     margin-right: 30px;
     margin-bottom: 0;
+      padding: 50px 20px;
     &:last-child{
       margin-right: 0;
       margin-bottom: 0;
@@ -44,6 +55,7 @@
   }
   @include mq (desktop){
     min-width: 330px;
+    padding: 50px 43px 62px 43px;
   }
 }
 .contacts__label-cafe,
@@ -51,7 +63,9 @@
   display: block;
   text-align: center;
   width: 80px;
-  height: 16px;
+  // height: 16px;
+  padding: 2px 12px;
+  @include font (500, 16px, 1.8, 0.04em);
 
   color: var(--primary-white-color);
   background-color: var(--contacts-cafe-color);
@@ -62,20 +76,58 @@
   background-color: var(--contacts-food-truck-color);
 }
 .contacts__card-city {
+  margin-bottom: 10px;
   @include font(500, 12px, 1.8, 0.04em);
   color: var(--primary-black-color);
+    @include mq (tablet) {
+      margin-bottom: 14px;
+      @include font(500, 14px, 1.8, 0.04em);
+  } 
+    @include mq (desktop) {
+      @include font(500, 16px, 1.8, 0.04em);
+      margin-bottom: 10px;
+  } 
 }
 .contacts__box-wrap {
   padding-top: 25px;
   padding-bottom: 25px;
+    &:last-child {
+    padding-bottom: 0;
+  }
+    &:nth-child(3) {
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+  }
+      @include mq (tablet) {
+      padding-bottom: 30px;
+      padding-top: 30px;
+  } 
+        @include mq (desktop) {
+      padding-bottom: 32px;
+      padding-top: 32px;
+
+  } 
+
 }
 .contacts__card-text {
   @include font(500, 12px, 1.5);
   color: var(--primary-gray-txt-color);
+  @include mq (tablet) {
+      @include font(500, 14px, 1.6, 0.04em);
+  } 
+    @include mq (desktop) {
+      @include font(500, 16px, 1.8, 0.04em);
+  } 
 }
 
 .contacts__works-days {
   @include font(500, 12px, 1.8);
+      @include mq (tablet) {
+      @include font(500, 14px, 1.8, 0.04em);
+  } 
+    @include mq (desktop) {
+      @include font(500, 16px, 1.8, 0.04em);
+  } 
 }
 .contacts__works-item {
   &:first-child {
@@ -85,11 +137,24 @@
 .contacts__time {
   color: var(--secondary-accent-color);
   @include font(500, 12px, 1.8);
+        @include mq (tablet) {
+      @include font(500, 14px, 1.8, 0.04em);
+  } 
+    @include mq (desktop) {
+      @include font(500, 16px, 1.8, 0.04em);
+  } 
 }
 .contacts__phone,
 .contacts__mail {
   display: block;
+   @include font(500, 12px, 1.8, 0.04em);
   color: var(--primary-gray-txt-color);
+    @include mq (tablet) {
+      @include font(500, 14px, 1.8, 0.04em);
+  } 
+    @include mq (desktop) {
+      @include font(500, 16px, 1.8, 0.04em);
+  } 
 }
 .contacts__btn-list {
   margin: 0 auto;
@@ -120,6 +185,10 @@
   background-color: var(--reviews-house-color);
 }
 .btn-franchise {
+  &:hover,
+  &:focus {
+    background-color: var(--contacts-underline-color);
+  }
   color: var(--primary-accent-color);
   background-color: var(--primary-white-color);
   @include mq(tablet){
