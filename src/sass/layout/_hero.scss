@@ -1,0 +1,215 @@
+.hero {
+    background: url("../images/hero/icecreammob.png") , url("../images/hero/ellipsemob.png"),var(--hero-bg-color);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 80% 100%, right center;
+    @include mq(retina){
+        background: url("../images/hero/icecreammob_ret.png") , url("../images/hero/ellipsemob_ret.png"),var(--hero-bg-color);
+        background-repeat: no-repeat, no-repeat;
+    background-position: 80% 100%, right center;
+    background-size: 171px 410px, 284px 344px;
+    }
+    @include mq(mobile-only) {
+        height: 500px;
+    
+    }
+    @include mq(tablet) {
+        height: 400px;
+    background:var(--hero-bg-color);
+    }
+    
+    @include mq(desktop) {
+        height: 665px;
+
+    }
+
+}
+.hero {
+    .container {
+        margin: 0  auto;
+        @include mq(tablet) {
+            height: 400px;
+            background: url("../images/hero/icecream_tablet.png") ,url("../images/hero/tasty_tablet.png"), url("../images/hero/ellipse_tablet.png"),url("../images/hero/milk_tablet.png"),var(--hero-bg-color);
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-position:  60% 130%, 97% 100% ,70%,  5% 96%;
+            @include mq(retina){
+                background: url("../images/hero/icecream_tablet_ret.png") ,url("../images/hero/tasty_tablet_ret.png"), url("../images/hero/ellipse_tablet_ret.png"),url("../images/hero/milk_tablet_ret.png"),var(--hero-bg-color);
+                background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+                background-position:  60% 130%, 97% 100% ,70%,  5% 96%;
+                background-size: 143px 336px,168px 133px, 324px 322px, 124px 126px;
+            }
+        }
+        @include mq(desktop) {
+            height: 665px;
+            background: url("/images/hero/icecream_desk.png") ,url("/images/hero/tasty_desk.png"), url("/images/hero/ellipse_desk.png"),url("/images/hero/milk_desk.png"),var(--hero-bg-color);
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+            background-position:  60% 130%, 93% 100% , 70%,  7% 93%;
+            @include mq(retina){
+                background: url("/images/hero/icecream_desk_ret.png") ,url("/images/hero/tasty_desk_ret.png"), url("/images/hero/ellipse_desk_ret.png"),url("/images/hero/milk_desk_ret.png"),var(--hero-bg-color);
+                background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+                background-position:  60% 130%, 93% 100% , 70%,  7% 93%;
+                background-size: 236px 557px,293px 232px, 538px 538px, 188px 191px;
+            }
+        }
+    }
+}
+.hero_header {
+    width: 218px;
+    font-family: "Titan One", sans-serif;
+    color: var(--primary-white-color);
+    text-transform: uppercase;
+    @include font($fz:26px,$lh:(30/26),$ls:0.04em);
+    @include mq(tablet) {
+        @include font($fz:22px,$lh:(25/22),$ls:0.04em);
+        width: 162px;
+    }
+    @include mq(desktop) {
+        @include font($fz:38px,$lh:(44/35),$ls:0.04em);
+        width: 277px;
+    }
+}
+
+.hero_header-accent {
+    @include font($fz:48px,$lh:(46/48));
+    color: var(--primary-accent-color);
+    @include mq(tablet) {
+        @include font($fz:34px,$lh:(31/34),$ls:0.04em);
+    }
+    @include mq(desktop) {
+        @include font($fz:58px,$lh:(52/58),$ls:0.04em);
+    }
+}
+.hero_wrapper {
+    padding-top: 193px;
+    margin-bottom: 19px;
+    .hero_header-numbers {
+        display: none;
+        @include mq(tablet){
+            display: block;
+        }
+    }
+    @include mq(tablet) {
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 102px;
+    align-items: flex-end;
+    }
+    @include mq(desktop) {
+    padding-top: 171px;
+    }
+
+}
+.hero_header-numbers_first{
+    margin-bottom: 13px;
+}
+.hero_header-numbers_mod {
+    @include font($fz:28px,$lh:(32/28));
+    color: var(--primary-accent-color);
+    font-family: "Titan One", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+    @include mq(desktop) {
+        @include font($fz:46px,$lh:(53/46),$ls:0.04em);
+    }
+}
+.hero_header-numbers_mod::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    margin-left: 35px;
+    margin-top: -3px;
+    z-index: -1;
+    @include mq(desktop) {
+        width: 30px;
+        height: 30px;
+        margin-left: 62px;
+        margin-top: -7px;
+    }
+}
+.hero_header-numbers_span{
+    @include font($fz:8px,$lh:(10/8));
+    color: var(--primary-white-color);
+    font-family: "DM Sans", sans-serif;
+    @include mq(desktop) {
+        @include font($fz:14px,$lh:(18/14));
+    }
+}
+.button_block {
+    @include font($fz:8px,$lh:(10.5/8));
+    display: flex;
+    margin-bottom: 66px;
+    @include mq(desktop) {
+        @include font($fz:14px,$lh:(14/18));
+        margin-bottom: 112px;
+    }
+}
+.hero_btn {
+    padding: 7px 13.5px;
+    border-radius: 20px;
+    @include mq(desktop) {
+        padding: 15px 17px;
+    }
+
+}
+
+.button_block-products_btn {
+    background-color: var(--primary-accent-color);
+    margin-right: 8px;
+    color: var(--primary-white-color);
+    @include mq(desktop) {
+        margin-right: 15px;
+    }
+}
+.button_block-about_btn {
+background-color: var(--primary-white-color);
+color: var(--primary-accent-color);
+}
+.button_block-about_btn:hover {
+    background-color: var(--hover-gray-button-color);
+}
+.description_hero {
+    display: none;
+    @include mq(tablet) {
+       display: block;
+       margin-left: 154px - 35px;
+    }
+    @include mq(desktop) {
+        margin-left: 295px - 115px;
+     }
+}
+.description_hero-text{
+
+    color: var(--primary-white-color);
+    @include font($fz:8px,$lh:(12/8));
+    font-family: "DM Sans", sans-serif;
+    width: 114px;
+    margin-bottom: 7px;
+
+    @include mq(desktop) {
+        @include font($fz:14px,$lh:(20/14));
+        width: 200px;
+        margin-bottom: 20px;
+     }
+}
+.description_hero-button {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    // background-color: var(--primary-white-color);
+    background-image: url("../images/hero/button_tablet.png");
+    @include mq(desktop) {
+        width: 26px;
+        height: 26px;
+        background-image: url("../images/hero/button_desk.png");
+     }
+    
+}
