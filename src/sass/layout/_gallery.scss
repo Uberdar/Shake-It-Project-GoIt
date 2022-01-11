@@ -1,5 +1,8 @@
 .main-gallery {
   background-image: linear-gradient(to bottom, #fff5f6 40%, #ffffff 40%, #ffffff 100%);
+  .container {
+    margin: 0 auto;
+  }
 }
 .gallery__link {
   border-radius: 7px;
