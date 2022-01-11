@@ -1,0 +1,1 @@
+{"version":3,"sources":["js/smp.js"],"names":["lightbox","SimpleLightbox"],"mappings":";AAAA,IAAIA,EAAW,IAAIC,eAAe,aAAc","file":"smp.0d359e22.js","sourceRoot":"../src","sourcesContent":["var lightbox = new SimpleLightbox('.gallery a', {});\n"]}
