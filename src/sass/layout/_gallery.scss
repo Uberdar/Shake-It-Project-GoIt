@@ -6,6 +6,48 @@
 }
 .gallery {
   display: flex;
+  // &.gallery--bp {
+  //   @include mq(mobile) {
+  //     width: 480px;
+  //     background-color: #222;
+  //   }
+  //   @include mq(tablet) {
+  //     width: 768px;
+  //     background-color: #666;
+  //   }
+  //   @include mq(desktop) {
+  //     width: 1280px;
+  //     background-color: #999;
+  //   }
+  // }
+}
+
+.gallery__columm {
+  padding: 0px 3px;
+  @include mq(mobile) {
+    background-color: #222;
+  }
+  @include mq(tablet) {
+    background-color: #669900;
+  }
+  @include mq(desktop) {
+    background-color: #967549;
+  }
+}
+.gallery__img {
+  width: 139px;
+  @include mq(mobile-only) {
+    width: 100%;
+  }
+  @include mq(mobile) {
+    width: 100%;
+  }
+  @include mq(tablet) {
+    width: 100%;
+  }
+  @include mq(desktop) {
+    width: 100%;
+  }
 }
 
 /*!
@@ -14,6 +56,7 @@
 	Available for use under the MIT License
 	Version 2.10.1
 */
+
 body.hidden-scroll {
   overflow: hidden;
 }

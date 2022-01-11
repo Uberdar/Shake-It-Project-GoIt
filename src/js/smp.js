@@ -1,5 +1,6 @@
 var lightbox = new SimpleLightbox('.gallery a', {
   //   overlay: true,
+  gallery: simple - lightbox,
   captions: false,
 });
 
