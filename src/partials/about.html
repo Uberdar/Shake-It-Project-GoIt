@@ -1,0 +1,53 @@
+<section class="about">
+  <div class="container">
+    <div class="about_header">
+      <p class="about_title">Tradition and love</p>
+      <h2 class="about_title-description">How it’s made?</h2>
+    </div>
+    <div class="about_body">
+      <div class="about_picture">
+        <picture>
+          <source
+            srcset="
+              ../src/images/about/about-pic-desk.png    1x,
+              ../src/images/about/about-pic-desk-x2.png 2x
+            "
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="
+              ../src/images/about/about-pic-tab.png    1x,
+              ../src/images/about/about-pic-tab-x2.png 2x
+            "
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="
+              ../src/images/about/about-pic-mob.png    1x,
+              ../src/images/about/about-pic-mob-x2.png 2x
+            "
+            media="(min-width:320px)"
+          />
+          <img src="../src/images/about/about-pic-mob.png" alt="A cow with a jar of milk" />
+        </picture>
+      </div>
+      <div class="about_description">
+        <p class="about_description-main">
+          Mint chocolate strawberry chocolate chip peanut butter rocky road mint chocolate chip
+          chocolate dark chocolate rocky road neopolitan cake batter.
+        </p>
+        <p class="about_description-secondary about_description-background">
+          Vanilla chocolate chip cookie dough strawberry chocolate chip cookie dough rocky road,
+          vanilla french vanilla. Strawberry Mint mint chocolate chip pistachio. French vanilla
+          neopolitan dark chocolate.
+        </p>
+        <button class="about_button" type="button">
+          Read more
+          <svg class="about_button-icon" width="6" height="10">
+            <use href="images/about/arrow.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

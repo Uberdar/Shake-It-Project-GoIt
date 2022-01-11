@@ -1,0 +1,78 @@
+.advantages .container {
+  margin: 0 auto;
+}
+
+.advantages {
+  background-color: var(--secondary-bg-color);
+  padding-bottom: 97px;
+  @include mq(tablet) {
+    padding-bottom: 140px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.advantages_card-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantages_item {
+  width: 230px;
+  @include mq(tablet) {
+    flex-basis: calc((100% - 180px) / 3);
+  }
+  @include mq(desktop) {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+.advantages_item:not(:last-child) {
+  margin-bottom: 38px;
+  @include mq(tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.advantages_title {
+  font-family: Titan One;
+  text-transform: uppercase;
+  color: var(--primary-accent-color);
+  @include font($fw: 400, $fz: 36px, $lh: 1.14, $ls: 0.04em);
+  margin-top: 16px;
+  margin-bottom: 20px;
+  @include mq(tablet) {
+    @include font($fw: 400, $fz: 48px, $lh: 1.14, $ls: 0.04em);
+    margin-top: 36px;
+    margin-bottom: 13px;
+  }
+  @include mq(desktop) {
+    @include font($fw: 400, $fz: 58px, $lh: 1.14, $ls: 0.04em);
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+.advantages_description {
+  font-family: DM Sans;
+  color: var(--primary-black-color);
+  @include font($fw: 700, $fz: 12px, $lh: 1.7);
+  @include mq(tablet) {
+    @include font($fw: 700, $fz: 14px, $lh: 1.7);
+  }
+  @include mq(desktop) {
+    @include font($fw: 700, $fz: 16px, $lh: 1.7, $ls: 0.02em);
+  }
+}
