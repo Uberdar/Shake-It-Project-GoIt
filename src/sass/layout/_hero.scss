@@ -1,9 +1,9 @@
 .hero {
-    background: url("/images/hero/icecreammob.png") , url("/images/hero/ellipsemob.png"),var(--hero-bg-color);
+    background: url("../images/hero/icecreammob.png") , url("../images/hero/ellipsemob.png"),var(--hero-bg-color);
     background-repeat: no-repeat, no-repeat;
     background-position: 80% 100%, right center;
     @include mq(retina){
-        background: url("/images/hero/icecreammob_ret.png") , url("/images/hero/ellipsemob_ret.png"),var(--hero-bg-color);
+        background: url("../images/hero/icecreammob_ret.png") , url("../images/hero/ellipsemob_ret.png"),var(--hero-bg-color);
         background-repeat: no-repeat, no-repeat;
     background-position: 80% 100%, right center;
     background-size: 171px 410px, 284px 344px;
@@ -28,11 +28,11 @@
         margin: 0  auto;
         @include mq(tablet) {
             height: 400px;
-            background: url("../images/hero/icecream_tablet.png") ,url("/images/hero/tasty_tablet.png"), url("/images/hero/ellipse_tablet.png"),url("/images/hero/milk_tablet.png"),var(--hero-bg-color);
+            background: url("../images/hero/icecream_tablet.png") ,url("../images/hero/tasty_tablet.png"), url("../images/hero/ellipse_tablet.png"),url("../images/hero/milk_tablet.png"),var(--hero-bg-color);
             background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
             background-position:  60% 130%, 97% 100% ,70%,  5% 96%;
             @include mq(retina){
-                background: url("/images/hero/icecream_tablet_ret.png") ,url("/images/hero/tasty_tablet_ret.png"), url("/images/hero/ellipse_tablet_ret.png"),url("/images/hero/milk_tablet_ret.png"),var(--hero-bg-color);
+                background: url("../images/hero/icecream_tablet_ret.png") ,url("../images/hero/tasty_tablet_ret.png"), url("../images/hero/ellipse_tablet_ret.png"),url("../images/hero/milk_tablet_ret.png"),var(--hero-bg-color);
                 background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
                 background-position:  60% 130%, 97% 100% ,70%,  5% 96%;
                 background-size: 143px 336px,168px 133px, 324px 322px, 124px 126px;
