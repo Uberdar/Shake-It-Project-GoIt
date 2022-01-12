@@ -6,30 +6,32 @@
     </div>
     <div class="about_body">
       <div class="about_picture">
-        <picture>
-          <source
-            srcset="
-              ../src/images/about/about-pic-desk.png    1x,
-              ../src/images/about/about-pic-desk-x2.png 2x
-            "
-            media="(min-width:1200px)"
-          />
-          <source
-            srcset="
-              ../src/images/about/about-pic-tab.png    1x,
-              ../src/images/about/about-pic-tab-x2.png 2x
-            "
-            media="(min-width:768px)"
-          />
-          <source
-            srcset="
-              ../src/images/about/about-pic-mob.png    1x,
-              ../src/images/about/about-pic-mob-x2.png 2x
-            "
-            media="(min-width:320px)"
-          />
-          <img src="../src/images/about/about-pic-mob.png" alt="A cow with a jar of milk" />
-        </picture>
+        <div class="about_picture-position">
+          <picture>
+            <source
+              srcset="
+                ../src/images/about/about-pic-desk.png    1x,
+                ../src/images/about/about-pic-desk-x2.png 2x
+              "
+              media="(min-width:1280px)"
+            />
+            <source
+              srcset="
+                ../src/images/about/about-pic-tab.png    1x,
+                ../src/images/about/about-pic-tab-x2.png 2x
+              "
+              media="(min-width:768px)"
+            />
+            <source
+              srcset="
+                ../src/images/about/about-pic-mob.png    1x,
+                ../src/images/about/about-pic-mob-x2.png 2x
+              "
+              media="(min-width:320px)"
+            />
+            <img src="../src/images/about/about-pic-mob.png" alt="A cow with a jar of milk" />
+          </picture>
+        </div>
       </div>
       <div class="about_description">
         <p class="about_description-main">
@@ -41,7 +43,7 @@
           vanilla french vanilla. Strawberry Mint mint chocolate chip pistachio. French vanilla
           neopolitan dark chocolate.
         </p>
-        <button class="about_button" type="button">
+        <button class="about_button" type="button" data-modal-open>
           Read more
           <svg class="about_button-icon" width="6" height="10">
             <use href="images/about/arrow.svg#icon-arrow"></use>
@@ -50,4 +52,32 @@
       </div>
     </div>
   </div>
+  <!-- MODAL WINDOW "READ MORE" BUTTON -->
+
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal-about">
+      <p class="modal-about_description-first">
+        Mint chocolate strawberry chocolate chip peanut butter rocky road mint chocolate chip
+        chocolate dark chocolate rocky road neopolitan cake batter.
+      </p>
+      <p class="modal-about_description-secondary">
+        Vanilla chocolate chip cookie dough strawberry chocolate chip cookie dough rocky road,
+        vanilla french vanilla. Strawberry Mint mint chocolate chip pistachio. French vanilla
+        neopolitan dark chocolate. Dark chocolate neopolitan.
+      </p>
+      <p class="modal-about_description-third">
+        Strawberry coffee chocolate chip cookie dough french vanilla french vanilla cookies and
+        cream strawberry cookies and cream chocolate chip cookie dough cake batter strawberry
+        chocolate chip vanilla neopolitan rocky road. Chocolate mint chocolate chip mint chocolate
+        chip peanut butter neopolitan.
+      </p>
+      <button class="modal-about_close-button" type="button" data-modal-close>
+        <svg width="18" height="18">
+          <use href="images/about/modal_about.svg#icon-modal-about"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- MODAL JS FILE -->
+  <script src="js/modal_about.js"></script>
 </section>

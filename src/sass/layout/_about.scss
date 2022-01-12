@@ -6,6 +6,7 @@
   text-align: center;
   background-color: var(--secondary-bg-color);
   @include mq(mobile-only) {
+    padding-bottom: 39px;
     background-image: url(../images/about/about-bgd-mob.png), linear-gradient(#fff5f6, #fff5f6);
     background-repeat: no-repeat;
     background-position: bottom 30px left 0, center;
@@ -14,11 +15,15 @@
       background-image: url(../images/about/about-bgd-mob-x2.png), linear-gradient(#fff5f6, #fff5f6);
     }
   }
+  @include mq(tablet) {
+    padding-bottom: 66px;
+  }
   @include mq(desktop) {
     background-image: url(../images/about/about-bgd-desktop.png), linear-gradient(#fff5f6, #fff5f6);
     background-repeat: no-repeat;
     background-position: bottom 30px left 0, center;
     background-size: contain;
+    padding-bottom: 51px;
     @include retina {
       background-image: url(../images/about/about-bgd-desktop-x2.png),
         linear-gradient(#fff5f6, #fff5f6);
@@ -56,7 +61,7 @@
 
   @include mq(tablet) {
     @include font($fw: 400, $fz: 48px, $lh: 1.15, $ls: 0.04em);
-    margin-bottom: 50px;
+    margin-bottom: 91px;
   }
   @include mq(desktop) {
     @include font($fw: 400, $fz: 58px, $lh: 1.14, $ls: 0.06em);
@@ -65,6 +70,8 @@
 }
 
 .about_body {
+  @include mq(mobile) {
+  }
   @include mq(tablet) {
     display: flex;
     justify-content: center;
@@ -75,14 +82,25 @@
 .about_picture {
   display: inline-block;
   align-items: center;
-  margin-bottom: 46px;
+  margin-bottom: 38px;
   @include mq(tablet) {
+    position: relative;
+    width: 340px;
+    height: 340px;
     margin-bottom: 0;
-    padding-bottom: 166px;
   }
   @include mq(desktop) {
-    margin-bottom: 39px;
+    width: 516px;
+    height: 516px;
     padding-bottom: 0;
+  }
+}
+
+.about_picture-position {
+  @include mq(tablet-only) {
+    position: absolute;
+    left: 0;
+    top: -75px;
   }
 }
 
@@ -93,14 +111,12 @@
   @include font($fw: 500, $fz: 12px, $lh: 1.6);
   margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 39px;
-  @include mq(mobile) {
-    width: 220px;
-  }
+  margin-bottom: 17px;
   @include mq(tablet) {
     width: 340px;
     margin-left: 17px;
-    margin-bottom: 66px;
+    margin-bottom: 0;
+    margin-right: 0;
   }
   @include mq(desktop) {
     width: 463px;
@@ -114,6 +130,7 @@
   @include mq(tablet) {
     @include font($fw: 500, $fz: 14px, $lh: 1.8);
     width: 340px;
+    margin-bottom: 33px;
   }
   @include mq(desktop) {
     @include font($fw: 500, $fz: 16px, $lh: 1.8, $ls: 0.04em);
@@ -138,6 +155,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq(tablet) {
+    display: block;
+    margin-left: 0;
+  }
+
   width: 176px;
   height: 44px;
   font-family: DM Sans;
@@ -146,6 +169,8 @@
   background: #ffffff;
   border-radius: 22px;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus,
   &:active {
@@ -158,4 +183,107 @@
 .about_button-icon {
   stroke: var(--primary-accent-color);
   margin-left: 14px;
+}
+
+// MODAL WINDOW ABOUT SECTION
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(60, 13, 15, 0.3);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+
+  font-family: DM Sans;
+  @include font($fw: 500, $fz: 12px, $lh: 1.6);
+  background-color: var(--secondary-bg-color);
+  padding: 40px 30px;
+
+  @include mq(mobile-only) {
+    width: 90vw;
+    min-height: 400px;
+  }
+
+  @include mq(tablet) {
+    max-width: 700px;
+    max-height: 400px;
+    @include font($fw: 500, $fz: 14px, $lh: 1.8);
+    padding: 60px 60px;
+  }
+  @include mq(desktop) {
+    max-width: 1050px;
+    max-height: 480px;
+    @include font($fw: 500, $fz: 16px, $lh: 1.8, $ls: 0.04em);
+    padding: 60px 50px;
+  }
+}
+
+.modal-about_description-first {
+  color: var(--primary-black-color);
+  margin-bottom: 30px;
+
+  @include mq(desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.modal-about_description-secondary,
+.modal-about_description-third {
+  color: var(--primary-gray-txt-color);
+  margin-bottom: 30px;
+
+  @include mq(desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.modal-about_description-third {
+  margin-bottom: 0;
+}
+
+.modal-about_close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  fill: var(--primary-black-color);
+  background-color: var(--secondary-bg-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus,
+  &:active {
+    fill: var(--secondary-bg-color);
+    background-color: var(--secondary-accent-color);
+    border: border 1px solid var(--secondary-accent-color);
+  }
 }
