@@ -1,9 +1,13 @@
 .contacts__section {
-  background-image: linear-gradient(to bottom, #ffffff 7%,
-    #fff5f6 7%,#fff5f6 100%);
+  background-image: linear-gradient(to bottom, #ffffff 9%,
+    #fff5f6 9%,#fff5f6 100%);
   @include mq(tablet) {
-  background-image: linear-gradient(to bottom, #ffffff 15%,
-    #fff5f6 15%,#fff5f6 100%);
+  background-image: linear-gradient(to bottom, #ffffff 18%,
+    #fff5f6 18%,#fff5f6 100%);
+  }
+    @include mq(desktop) {
+  background-image: linear-gradient(to bottom, #ffffff 20%,
+    #fff5f6 20%,#fff5f6 100%);
   }
 }
 .contacts__container{
@@ -31,7 +35,7 @@
   max-width: 220px;
   padding: 43px 20px;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   border: 1px solid var(--contacts-underline-color);
   background-color: var(--primary-white-color);
@@ -63,17 +67,39 @@
   display: block;
   text-align: center;
   width: 80px;
-  // height: 16px;
-  padding: 2px 12px;
-  @include font (500, 16px, 1.8, 0.04em);
-
+  padding: 4px 25px;
+  @include font (500, 12px, 1.8, 0.04em);
   color: var(--primary-white-color);
   background-color: var(--contacts-cafe-color);
   border-radius: 4px;
+   @include mq (tablet) {
+      @include font(500, 16px, 1.8, 0.04em);
+      width: 73px;
+      padding: 4px 16px;
+      border-radius: 6px;
+  } 
+    @include mq (desktop) {
+      @include font(500, 16px, 1.8, 0.04em);
+        width: 138px;
+        padding: 4px 16px;
+  } 
+  
+  
 }
 .contacts__label-foodtrack {
   width: 130px;
+  padding: 4px 25px;
   background-color: var(--contacts-food-truck-color);
+    @include mq (tablet) {
+      width: 138px;
+      border-radius: 6px;
+      padding: 4px 16px;
+  } 
+      @include mq (desktop) {
+      @include font(500, 16px, 1.8, 0.04em);
+        width: 138px;
+        padding: 4px 16px;
+  }
 }
 .contacts__card-city {
   margin-bottom: 10px;
@@ -172,6 +198,7 @@
   height: 44px;
   width: 162px;
   margin: 0 auto;
+  border: transparent;
   @include font(700, 16px, 1.3);
 
   @include mq(tablet){
