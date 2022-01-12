@@ -87,11 +87,34 @@
 
 .slider-slide__wrapp {
   position: relative;
-  z-index: 20;
   padding: 43px 50px 20px 50px;
   margin-bottom: 30px;
-
   background-color: var(--reviews-bg-color);
+  border-radius: 25px;
+
+  &::before {
+    position: absolute;
+    top: 25px;
+    left: 60px;
+    z-index: 1;
+    display: block;
+    content: ' ';
+    width: 54px;
+    height: 40px;
+    background-image: url(../images/reviews/qoutes.svg);
+    background-repeat: no-repeat;
+    color: var(--contacts-underline-color);
+
+    @include mq(mobile) {
+      left: 35px;
+      top: 30px;
+    }
+
+    @include mq(desktop) {
+      left: 60px;
+      top: 32px;
+    }
+  }
 
   @include mq(tablet-only) {
     background-color: transparent;
@@ -111,14 +134,12 @@
 }
 
 .slider-slide__meta {
-  position: relative;
-  z-index: 21;
   padding-right: 16px;
   padding-left: 7px;
   background: repeating-linear-gradient(
     var(--reviews-bg-color) 0px,
     var(--reviews-bg-color) 30px,
-    var(--contacts-underline-color) 31px,
+    var(--contacts-underline-color) 30px,
     var(--contacts-underline-color) 31px
   );
 
@@ -145,10 +166,10 @@
 }
 
 .slider-slide__text {
+  position: relative;
+  z-index: 2;
   font-style: normal;
-
   @include font($fw: 500, $fz: 12px, $lh: 2.6);
-
   color: var(--primary-black-color);
 
   @include mq(tablet) {
@@ -157,35 +178,6 @@
 
   @include mq(desktop) {
     @include font($fw: null, $fz: 16px, $lh: 1.88, $ls: null);
-  }
-
-  &::before {
-    position: absolute;
-    top: -15px;
-    left: 10px;
-    z-index: -1;
-    display: inline-block;
-    content: ' ';
-    width: 54px;
-    height: 40px;
-    background-image: url(../images/reviews/qoutes.svg);
-    background-repeat: no-repeat;
-    color: var(--contacts-underline-color);
-
-    @include mq(mobile) {
-      top: -20px;
-      left: -22px;
-    }
-
-    @include mq(tablet) {
-      top: -17px;
-      left: -8px;
-    }
-
-    @include mq(desktop) {
-      top: -15px;
-      left: 0;
-    }
   }
 }
 
@@ -236,6 +228,11 @@
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 9px);
+
+  &:hover,
+  &:focus {
+    outline-color: var(--primary-accent-color);
+  }
 }
 
 .swiper-pagination-bullet {
