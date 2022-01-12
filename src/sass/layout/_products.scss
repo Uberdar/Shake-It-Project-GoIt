@@ -149,8 +149,12 @@
 }
 
 .products__item:not(last-child) {
-  @include mq(mobile) {
-    margin-bottom: 129px;
+  margin-bottom: 129px;
+  @include mq(tablet) {
+    margin-bottom: 0;
+  }
+  @include mq(desktop) {
+    margin-bottom: 0;
   }
 }
 
