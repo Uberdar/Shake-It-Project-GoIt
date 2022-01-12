@@ -215,3 +215,41 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
      }
     
 }
+
+
+#scrl-button {
+    display: inline-block;
+    background-color: #D41443;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #scrl-button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #scrl-button:hover {
+    cursor: pointer;
+    // background-color: #333;
+  }
+  #scrl-button:active {
+    background-color: #555;
+  }
+  #scrl-button.show {
+    opacity: 1;
+    visibility: visible;
+  }
