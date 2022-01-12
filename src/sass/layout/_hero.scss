@@ -42,11 +42,11 @@
             height: 665px;
             background: url("/images/hero/icecream_desk.png") ,url("/images/hero/tasty_desk.png"), url("/images/hero/ellipse_desk.png"),url("/images/hero/milk_desk.png"),var(--hero-bg-color);
             background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-            background-position:  60% 130%, 93% 100% , 70%,  7% 93%;
+            background-position:  60% 130%, 100% 100% , 70%,  0% 93%;
             @include mq(retina){
                 background: url("/images/hero/icecream_desk_ret.png") ,url("/images/hero/tasty_desk_ret.png"), url("/images/hero/ellipse_desk_ret.png"),url("/images/hero/milk_desk_ret.png"),var(--hero-bg-color);
                 background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-                background-position:  60% 130%, 93% 100% , 70%,  7% 93%;
+                background-position:  60% 130%, 100% 100% , 70%,  0% 93%;
                 background-size: 236px 557px,293px 232px, 538px 538px, 188px 191px;
             }
         }
