@@ -4,6 +4,16 @@
 
 .products__container {
   margin: 0 auto;
+  padding-top: 121px;
+  padding-bottom: 98px;
+  @include mq(tablet) {
+    padding-top: 122px;
+    padding-bottom: 112px;
+  }
+  @include mq(desktop) {
+    padding-top: 127px;
+    padding-bottom: 119px;
+  }
 }
 
 .products__container > p {
@@ -13,7 +23,6 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--secondary-accent-color);
-  padding-top: 121px;
   @include mq(tablet) {
     font-size: 26px;
     line-height: 1.15;
@@ -47,6 +56,17 @@
   }
 }
 
+.products__list {
+  @include mq(tablet) {
+    display: flex;
+    margin-right: -20px;
+  }
+  @include mq(desktop) {
+    display: flex;
+    margin-right: -27px;
+  }
+}
+
 .products__title {
   font-family: Titan One;
   font-size: 20px;
@@ -55,7 +75,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--primary-white-color);
-  // margin-bottom: 66px;
   position: relative;
 
   @include mq(desktop) {
@@ -81,7 +100,7 @@
 }
 .products__card {
   height: 100%;
-  width: 280px;
+  max-width: 480px;
   justify-content: center;
   margin: 0 auto;
   flex-direction: column;
@@ -110,25 +129,13 @@
   background-color: var(--products-milkshakes-color);
 }
 
-.products__card:not(last-child) {
+.products__card::not(last-child) {
   margin-bottom: 16px;
   @include mq(tablet) {
     margin-bottom: 0x;
   }
   @include mq(desktop) {
     margin-bottom: 0x;
-  }
-}
-
-.products__list {
-  padding-bottom: 98px;
-  @include mq(tablet) {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 112px;
-  }
-  @include mq(desktop) {
-    padding-bottom: 119px;
   }
 }
 
@@ -139,12 +146,14 @@
     margin: 0;
     flex-wrap: wrap;
     width: calc(100% / 3 - 20px);
+    margin-right: 20px;
   }
 
   @include mq(desktop) {
     margin: 0;
     flex-wrap: wrap;
     width: calc(100% / 3 - 27px);
+    margin-right: 27px;
   }
 }
 
@@ -245,7 +254,7 @@
   }
 }
 
-.products__title--milkshake:before {
+.products__title--milkshake::before {
   content: '';
   background-image: url('../images/products/products-milkshake-sm.png');
   display: block;
