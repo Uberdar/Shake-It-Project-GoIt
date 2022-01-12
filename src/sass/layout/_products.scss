@@ -293,26 +293,10 @@
 
 .products__icon {
   display: block;
-  margin: 30px 127px;
-
-  @include mq(tablet) {
-    margin: 30px 170px;
-  }
-  @include mq(desktop) {
-    margin: 30px 125px;
-  }
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 .products__icon img {
-  position: relative;
-  left: 50%;
-  transform: translate(-200%, 0);
-  @include mq(tablet) {
-    left: 50%;
-    transform: translate(-315%, 0);
-  }
-  @include mq(desktop) {
-    left: 50%;
-    transform: translate(-100%, 0);
-  }
+  margin: 0 auto;
 }
