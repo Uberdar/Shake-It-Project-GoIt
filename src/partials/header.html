@@ -56,19 +56,72 @@
         <a class="mobile-nav__link mobile-nav__link_current link" href="./index.html">Home</a>
       </li>
       <li class="mobile-nav__item">
-        <a class="mobile-nav__link link" href="">About us</a>
+        <a class="mobile-nav__link link" href="#customer-reviews">About us</a>
       </li>
       <li class="mobile-nav__item">
-        <a class="mobile-nav__link link" href="">How it’s made?</a>
+        <a class="mobile-nav__link link" href="#about">How it’s made?</a>
       </li>
       <li class="mobile-nav__item">
-        <a class="mobile-nav__link link" href="">Our products</a>
+        <a class="mobile-nav__link link" href="#products">Our products</a>
       </li>
       <li class="mobile-nav__item">
-        <a class="mobile-nav__link link" href="">Contact</a>
+        <a class="mobile-nav__link link" href="#contacts">Contact</a>
       </li>
     </ul>
   </div>
 
-  <!-- MODAL! -->
+  <!-- popup -->
+
+  <div class="backdrop-buynow is-hidden" data-buynow-popup>
+  <div class="modal">
+
+    <button type="button" class="modal__close-btn" data-buynow-btn-close>
+      <svg class="modal__icon-close-btn">
+          <use href="./images/header/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <form action="#" class="modal-form" autocomplete="off">
+      <p class="modal-form__title" lang="en">Fill the form </br> and we will call you</p>
+
+      <label class="modal-form__label">
+        <span class="modal-form__lable-name" lang="en">Name</span>
+        <span class="modal-form__span">
+          <input type="text" name="user-name" class="modal-form__input" required>
+         
+        </span>
+      </label>
+
+      <label class="modal-form__label">
+        <span class="modal-form__lable-name" lang="en">Phone</span>
+        <span class="modal-form__span">
+          <input type="tel" name="user-tel" class="modal-form__input" required title="096-111-11-11">
+         
+        </span>
+      </label>
+
+      <label class="modal-form__label">
+        <span class="modal-form__lable-name" lang="en">e-mail</span>
+        <span class="modal-form__span">
+          <input type="email" name="user-email" class="modal-form__input" required>
+        
+        </span>
+      </label>
+
+      <label class="modal-form__label">
+        <span class="modal-form__lable-name" lang="en">Comments</span>
+        <textarea name="user-message" class="modal-form__message" placeholder="Введите текст"></textarea>
+      </label>
+      
+      <label for="user-term" class="modal-form__ckbox-description" lang="en">
+        <input type="checkbox" name="user-checkbox" id="user-term" class="modal-form__checkbox visually-hidden">
+        
+I agree to the processing of <a href=""
+          class="modal-form__contract-description" lang="en">personal data</a></label>
+      <button type="submit" class="modal-form__btn-submit">Submit</button>
+
+    </form>
+
+  </div>
+</div>
 </header>
