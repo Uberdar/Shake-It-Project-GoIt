@@ -20,17 +20,19 @@
 }
 .contacts__cards-wrapper {
   margin-bottom: 54px;
+  padding: 0 30px;
   @include mq (tablet){
     display: flex;
     // flex-wrap: wrap;
     margin-bottom: 80px;
+    padding: 0;
   }
   @include mq (desktop) {
     margin-bottom: 86px;
   }
 }
 .contacts__card-wrap {
-  min-width: 220px;
+  // width: 220px;
   max-width: 480px;
   padding: 43px 20px;
   margin-bottom: 20px;
@@ -257,9 +259,7 @@
   pointer-events: none;
 }
 .contacts__modal {
-  // @include mq(mobile-only) {
-  //     width: 90vw;
-  // }
+  width: 90vw;
   position: absolute;
   border-radius: 6px;
   top: 50%;
@@ -275,6 +275,7 @@
   background-color: var(--primary-white-color);
   @include mq(tablet) {
     display: flex;
+    width: unset;
   }
 }
 .contacts__btn-close {
@@ -303,7 +304,6 @@
   margin-right: 50px;
   }
 }
-
 .contacts__map-frame {
   max-width: 200;
   height: 150;
