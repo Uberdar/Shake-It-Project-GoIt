@@ -6,6 +6,7 @@
   text-align: center;
   background-color: var(--secondary-bg-color);
   @include mq(mobile-only) {
+    padding-top: 125px;
     padding-bottom: 39px;
     background-image: url(../images/about/about-bgd-mob.png), linear-gradient(#fff5f6, #fff5f6);
     background-repeat: no-repeat;
@@ -16,6 +17,7 @@
     }
   }
   @include mq(tablet) {
+    padding-top: 130px;
     padding-bottom: 66px;
   }
   @include mq(desktop) {
@@ -23,6 +25,7 @@
     background-repeat: no-repeat;
     background-position: bottom 30px left 0, center;
     background-size: contain;
+    padding-top: 125px;
     padding-bottom: 51px;
     @include retina {
       background-image: url(../images/about/about-bgd-desktop-x2.png),
@@ -35,7 +38,7 @@
   font-family: Titan One;
   text-align: center;
   text-transform: uppercase;
-  padding-top: 125px;
+  // padding-top: 125px;
 }
 
 .about_title {
