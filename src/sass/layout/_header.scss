@@ -29,6 +29,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  height: 50px;
 }
 .burger-btn__icon {
   width: 20px;
@@ -107,7 +108,7 @@
   }
   .burger-btn {
     display: block;
-    margin-left: 488px;
+    margin-left: 289px;
   }
 
   .logo-img {
@@ -119,7 +120,7 @@
   .logo-img {
     position: absolute;
     top: 34px;
-    left: -36px;
+    left: -55px;
   }
 }
 
@@ -138,7 +139,6 @@
 
 @media screen and (min-width: 1080px) {
   .logo-img {
-    position: absolute;
     top: 34px;
   }
   .nav-list {
@@ -198,13 +198,10 @@
     top: 0;
     bottom: auto;
     left: auto;
-    right: 0;
+    right: 18px;
   }
 }
 @media screen and (min-width: 1080px) {
-  .mobile-menu {
-    display: none;
-  }
 }
 .mobile-menu__close-btn {
   position: absolute;
@@ -452,4 +449,3 @@
     }
   }
 }
-
