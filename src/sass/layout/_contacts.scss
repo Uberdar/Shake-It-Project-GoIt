@@ -305,8 +305,7 @@
   }
 }
 .contacts__map-frame {
-  max-width: 200;
-  height: 150;
+  width: 100%;
   outline: 2px solid var(--secondary-accent-color);
   @include mq(tablet) {
     width: 200px;
